@@ -15,7 +15,7 @@ public class MapaAsientos extends JPanel
      
   
 
-       /**
+    /**
      * Interfaz principal.
      */
     private InterfazAvion ventana;

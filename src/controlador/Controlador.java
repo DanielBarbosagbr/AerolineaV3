@@ -35,22 +35,27 @@ public class Controlador implements ActionListener{
             
             if(opc == "Ingresar."){
                 while( !accesoConfirmado || intentos == 2){
+                    
                       
-                    String nombreFuncionario = vista.preguntarNombreFuncionario();
-                    String contraseñaFuncionario = vista.preguntarContraseñaFuncionario();
+                        String nombreFuncionario = vista.preguntarNombreFuncionario();
+                        String contraseñaFuncionario = vista.preguntarContraseñaFuncionario();
 
-                    funcionario = new Funcionario(nombreFuncionario, contraseñaFuncionario);
-                    boolean aprobado = funcionario.validarDatos();
+                        funcionario = new Funcionario(nombreFuncionario, contraseñaFuncionario);
+                        boolean aprobado = funcionario.validarDatos();
 
-                    if(aprobado == true){
-                        vista.setVisible(true);
-                        seguirCodigo = true;
-                        accesoConfirmado = true;
-                        
-                    }else{
-                        vista.contraseñaErrada();
-                        intentos ++;
-                    }
+                        if(aprobado == true){
+                            vista.setVisible(true);
+                            seguirCodigo = true;
+                            accesoConfirmado = true;
+                            
+                        }else if(intentos == 2){
+                            System.out.println("Demasiados intentos");
+                            
+                        }else{
+                            vista.contraseñaErrada();
+                            intentos ++;
+                        }
+                    
                 }
 
 

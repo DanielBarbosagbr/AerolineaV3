@@ -98,58 +98,5 @@ public class Funcionario {
     }
 
 
-/* 
-    public void LeerArchivo(){
-        File archivo=null;
-        FileReader fr=null;
-        BufferedReader br=null;
-        String linea;
-        
-        try{
-            archivo=new File("funcionarios.txt");
-            fr=new FileReader(archivo);
-            br=new BufferedReader(fr);
 
-
-            int i = 0;
-
-            while((linea=br.readLine())!=null) {
-                    dividirCadenas(linea,";",i);   
-                    i++;           
-                }                  
-            }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        finally{
-            try{
-                if( null != fr ){
-                    fr.close();
-                }
-            }
-        catch (Exception e2){
-            e2.printStackTrace();
-            }
-        }
-    }
-    public void dividirCadenas(String linea, String carac, int iterador){
-            
-        StringTokenizer st=new StringTokenizer(linea,carac);
-        
-        while(st.hasMoreTokens()){
-            String nombre1=st.nextToken();
-            String id1=st.nextToken();
-
-
-        }        
-    }
-    //metodo validar
-
-    public String obtenerNombreUsuario (){
-        return nombre;
-    }
-    public String obtenerContraseña (){
-        return id;
-    }
-    */
 }
